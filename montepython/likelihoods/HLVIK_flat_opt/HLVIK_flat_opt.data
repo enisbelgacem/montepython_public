@@ -1,0 +1,2 @@
+HLVIK_flat_opt.data_directory       = data.path['data']
+HLVIK_flat_opt.data_file             = 'list_cbc_flat_2G_HLVIK_10yr_JointGWGRB.dat'

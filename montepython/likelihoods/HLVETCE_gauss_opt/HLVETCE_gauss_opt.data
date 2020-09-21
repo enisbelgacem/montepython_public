@@ -1,0 +1,2 @@
+HLVETCE_gauss_opt.data_directory       = data.path['data']
+HLVETCE_gauss_opt.data_file             = 'list_cbc_gaussian_3G_HLV_CE_ET_10yr_JointGWGRB.dat'

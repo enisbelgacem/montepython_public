@@ -1,0 +1,2 @@
+HLV_flat_opt.data_directory       = data.path['data']
+HLV_flat_opt.data_file             = 'list_cbc_flat_2G_HLV_10yr_JointGWGRB.dat'

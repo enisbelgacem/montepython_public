@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 """
 .. module:: MontePython
    :synopsis: Main module

@@ -1,0 +1,2 @@
+HLVETCE_flat_real.data_directory       = data.path['data']
+HLVETCE_flat_real.data_file             = 'list_cbc_flat_3G_HLV_CE_ET_10yr_JointGWGRB_good_loc.dat'

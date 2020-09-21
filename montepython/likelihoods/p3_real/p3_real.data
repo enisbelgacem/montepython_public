@@ -1,0 +1,2 @@
+p3_real.data_directory       = data.path['data']
+p3_real.data_file             = 'p3_real.dat'

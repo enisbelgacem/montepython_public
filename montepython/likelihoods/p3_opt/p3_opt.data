@@ -1,0 +1,2 @@
+p3_opt.data_directory       = data.path['data']
+p3_opt.data_file             = 'p3_opt.dat'

@@ -1,0 +1,2 @@
+hq3_real.data_directory       = data.path['data']
+hq3_real.data_file             = 'hq3_real.dat'

@@ -518,14 +518,10 @@ def compute_lkl(cosmo, data):
         # Otherwise, take the existing value
         else:
             value = likelihood.backup_value
-        if data.command_line.display_each_chi2:
-            print "-> for ",likelihood.name,":  loglkl=",value,",  chi2eff=",-2.*value
         loglike += value
         # In case the fiducial file was written, store this information
         if value == 1j:
             flag_wrote_fiducial += 1
-    if data.command_line.display_each_chi2:
-            print "-> Total:  loglkl=",loglike,",  chi2eff=",-2.*loglike
 
     # Compute the derived parameters if relevant
     if data.get_mcmc_parameters(['derived']) != []:
@@ -549,20 +545,13 @@ def compute_lkl(cosmo, data):
     if flag_wrote_fiducial > 0:
         if flag_wrote_fiducial == len(data.lkl):
             raise io_mp.FiducialModelWritten(
-                "This is not an error but a normal abort, because " +
-                "fiducial file(s) was(were) created. " +
-                "You may now start a new run. ")
+                "Fiducial file(s) was(were) created, please start a new chain")
         else:
             raise io_mp.FiducialModelWritten(
-                "This is not an error but a normal abort, because " +
-                "fiducial file(s) was(were) created. " +
-                "However, be careful !!! Some previously non-existing " +
-                "fiducial files were created, but potentially not all of them. " +
-                "Some older fiducial files will keep being used. If you have doubts, " +
-                "you are advised to check manually in the headers of the " +
-                "corresponding files that all fiducial parameters are consistent "+
-                "with each other. If everything looks fine, "
-                "you may now start a new run.")
+                "Some previously non-existing fiducial files were created, " +
+                "but potentially not all of them. Please check now manually" +
+                " on the headers, of the corresponding that all parameters " +
+                "are coherent for your tested models")
 
     return loglike
 
